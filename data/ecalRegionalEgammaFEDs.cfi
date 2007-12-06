@@ -1,0 +1,18 @@
+module ecalRegionalEgammaFEDs = EcalRawToRecHitRoI {
+        string type = "egamma"
+	InputTag sourceTag = "EcalRawToRecHitFacility"
+
+        VPSet EmJobPSet = {
+                {InputTag Source = l1extraParticles:Isolated
+		double regionEtaMargin = 0.25
+		double regionPhiMargin = 0.40
+		double Ptmin = 5},
+		{InputTag Source = l1extraParticles:NonIsolated
+		double regionEtaMargin = 0.25
+		double regionPhiMargin = 0.40
+		double Ptmin = 5}
+        }
+}
+
+
+

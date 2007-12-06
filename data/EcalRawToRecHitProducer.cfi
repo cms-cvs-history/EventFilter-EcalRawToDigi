@@ -1,0 +1,6 @@
+module EcalRawToRecHitProducer = EcalRawToRecHitProducer {
+	InputTag sourceTag = EcalRawToRecHitRoI
+	bool splitOutput=true
+	string EBrechitCollection = "EcalRecHitsEB"
+	string EErechitCollection = "EcalRecHitsEE"
+}

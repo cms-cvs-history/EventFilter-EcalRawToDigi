@@ -1,0 +1,22 @@
+module ecalRegionalJetsFEDs = EcalRawToRecHitRoI {
+	string type ="jet"
+	InputTag sourceTag = "EcalRawToRecHitFacility"
+
+	VPSet JetJobPSet ={
+                { InputTag Source = l1extraParticles:Central
+		double Ptmin = 50
+		double regionEtaMargin = 1
+		double regionPhiMargin = 1},
+                { InputTag Source = l1extraParticles:Forward
+		double Ptmin = 50
+		double regionEtaMargin = 1
+		double regionPhiMargin = 1},
+                { InputTag Source = l1extraParticles:Tau
+		double Ptmin = 50
+		double regionEtaMargin = 1
+		double regionPhiMargin = 1}
+        }
+}
+
+
+

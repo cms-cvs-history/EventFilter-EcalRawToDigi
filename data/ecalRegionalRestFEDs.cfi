@@ -1,0 +1,7 @@
+module ecalRegionalRestFEDs = EcalRawToRecHitRoI {
+	string type = "all"
+	InputTag sourceTag = "EcalRawToRecHitFacility"
+}
+
+
+

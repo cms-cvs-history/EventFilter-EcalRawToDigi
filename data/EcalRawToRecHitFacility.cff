@@ -1,0 +1,4 @@
+include "EventFilter/EcalRawToDigi/data/EcalUnpackerWorkerESProducer.cfi"
+include "EventFilter/EcalRawToDigi/data/EcalRegionCablingESProducer.cff"
+
+include "EventFilter/EcalRawToDigi/data/EcalRawToRecHitFacility.cfi"

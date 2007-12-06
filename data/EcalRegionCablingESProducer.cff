@@ -1,0 +1,7 @@
+es_source dummy = EmptyESSource {
+	string recordName = "EcalRegionCablingRecord"
+	 vuint32 firstValid = { 1 }
+	bool iovIsRunNotTime = true
+}
+
+include "EventFilter/EcalRawToDigi/data/EcalRegionCablingESProducer.cfi"

@@ -1,0 +1,14 @@
+# geometry tools
+include "L1TriggerConfig/L1GeometryProducers/data/l1CaloGeometry.cfi"
+include "L1TriggerConfig/L1GeometryProducers/data/l1CaloGeomRecordSource.cff"
+
+#cabling tools
+include "EventFilter/EcalRawToDigi/data/EcalRegionCablingESProducer.cff"
+
+#region of interest FEDS + RefGetter
+include "EventFilter/EcalRawToDigi/data/ecalRegionalEgammaFEDs.cfi"
+include "EventFilter/EcalRawToDigi/data/ecalRegionalMuonsFEDs.cfi"
+include "EventFilter/EcalRawToDigi/data/ecalRegionalJetsFEDs.cfi"
+include "EventFilter/EcalRawToDigi/data/ecalRegionalTausFEDs.cfi"
+include "EventFilter/EcalRawToDigi/data/ecalRegionalRestFEDs.cfi"
+

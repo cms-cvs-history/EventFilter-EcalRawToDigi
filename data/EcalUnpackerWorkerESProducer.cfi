@@ -1,0 +1,18 @@
+es_module EcalUnpackerWorkerESProducer = EcalUnpackerWorkerESProducer {
+	PSet ElectronicsMapper ={
+		uint32 numbXtalTSamples = 10
+		uint32 numbTriggerTSamples =1
+	}
+
+	PSet DCCDataUnpacker = {
+		vint32 orderedFedList = {}#empty for map parsing
+		vint32 orderedDCCIdList = {}#empty for map parsing
+		string DCCMapFile = "EventFilter/EcalRawToDigiDev/data/DCCMap.txt"
+		bool headerUnpacking = false
+		bool srpUnpacking = false
+		bool tccUnpacking = true
+		bool feUnpacking = true
+		bool memUnpacking = false
+		bool syncCheck = false
+	}
+}

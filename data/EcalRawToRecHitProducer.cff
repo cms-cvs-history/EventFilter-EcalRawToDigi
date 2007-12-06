@@ -1,0 +1,20 @@
+
+module ecalRegionalEgammaRecHit = EcalRawToRecHitProducer from "EventFilter/EcalRawToDigi/data/EcalRawToRecHitProducer.cfi"
+replace ecalRegionalEgammaRecHit.sourceTag=ecalRegionalEgammaFEDs
+
+module ecalRegionalMuonsRecHit = EcalRawToRecHitProducer from "EventFilter/EcalRawToDigi/data/EcalRawToRecHitProducer.cfi"
+replace ecalRegionalMuonsRecHit.sourceTag=ecalRegionalMuonsFEDs
+
+module ecalRegionalJetsRecHit = EcalRawToRecHitProducer from "EventFilter/EcalRawToDigi/data/EcalRawToRecHitProducer.cfi"
+replace ecalRegionalJetsRecHit.sourceTag=ecalRegionalJetsFEDs
+
+# a second on to se if things are unpcaked twice.
+#module ecalRegionalJetsRecHitBIS = EcalRawToRecHitProducer from "EventFilter/EcalRawToDigi/data/EcalRawToRecHitProducer.cfi" 
+#replace ecalRegionalJetsRecHitBIS.sourceTag=ecalRegionalJetsFEDs
+
+module ecalRegionalTausRecHit = EcalRawToRecHitProducer from "EventFilter/EcalRawToDigi/data/EcalRawToRecHitProducer.cfi"
+replace ecalRegionalTausRecHit.sourceTag=ecalRegionalTausFEDs
+
+module ecalRecHitAll = EcalRawToRecHitProducer from "EventFilter/EcalRawToDigi/data/EcalRawToRecHitProducer.cfi"
+replace ecalRecHitAll.sourceTag=ecalRegionalRestFEDs
+

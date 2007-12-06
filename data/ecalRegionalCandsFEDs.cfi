@@ -1,0 +1,26 @@
+module ecalRegionalMuonsFEDs = EcalListOfFEDSProducer {
+	string type = "candidate"
+	VPSet CandJobPSet ={
+		{InputTag Source = l1extraParticles
+		double Ptmin = 0
+		double regionEtaMargin = 1
+		double regionPhiMargin =1},
+		{ InputTag Source = l1extraParticles:Central
+		double Ptmin = 50
+		double regionEtaMargin = 1
+		double regionPhiMargin = 1}, 
+		{InputTag Source = hltL2MuonCandidates
+		double Ptmin = 0
+		double regionEtaMargin = 0.5
+		double regionPhiMargin = 0.5},
+		{InputTag Source = hltL3MuonCandidates
+		double Ptmin = 0
+		double regionEtaMargin = 0.5
+		double regionPhiMargin = 0.5}
+	}
+
+   
+ }
+
+
+
