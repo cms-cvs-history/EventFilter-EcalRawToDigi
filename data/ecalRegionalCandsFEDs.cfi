@@ -1,22 +1,53 @@
-module ecalRegionalMuonsFEDs = EcalListOfFEDSProducer {
+module ecalRegionalCandFEDs = EcalListOfFEDSProducer {
 	string type = "candidate"
+	InputTag sourceTag = "EcalRawToRecHitFacility"
+
 	VPSet CandJobPSet ={
 		{InputTag Source = l1extraParticles
+		string cType = "l1muon"
 		double Ptmin = 0
 		double regionEtaMargin = 1
-		double regionPhiMargin =1},
+		double regionPhiMargin = 1
+		double epsilon =0.01
+		double bePrecise = false
+		string propagatorNameToBePrecise = ""
+		},
 		{ InputTag Source = l1extraParticles:Central
+		string cType = "l1jet"
 		double Ptmin = 50
 		double regionEtaMargin = 1
-		double regionPhiMargin = 1}, 
+		double regionPhiMargin = 1
+		double epsilon =0.01
+		double bePrecise = false
+		string propagatorNameToBePrecise = ""
+		}, 
+		{ InputTag Source = l1extraParticles:Tau
+		string cType = "view"
+		double Ptmin = 50
+		double regionEtaMargin = 1
+		double regionPhiMargin = 1
+		double epsilon =0.01
+		double bePrecise = false
+		string propagatorNameToBePrecise = ""
+		}, 
 		{InputTag Source = hltL2MuonCandidates
+		string cType = "chargedcandidate"
 		double Ptmin = 0
 		double regionEtaMargin = 0.5
-		double regionPhiMargin = 0.5},
+		double regionPhiMargin = 0.5
+		double epsilon =0.01
+		double bePrecise = false
+		string propagatorNameToBePrecise = ""
+		},
 		{InputTag Source = hltL3MuonCandidates
+		string cType = "chargedcandidate"
 		double Ptmin = 0
 		double regionEtaMargin = 0.5
-		double regionPhiMargin = 0.5}
+		double regionPhiMargin = 0.5
+		double epsilon =0.01
+		double bePrecise = false
+		string propagatorNameToBePrecise = ""
+		}
 	}
 
    
