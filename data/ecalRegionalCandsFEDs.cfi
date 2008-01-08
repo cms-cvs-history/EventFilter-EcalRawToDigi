@@ -1,6 +1,6 @@
 module ecalRegionalCandFEDs = EcalListOfFEDSProducer {
 	string type = "candidate"
-	InputTag sourceTag = "EcalRawToRecHitFacility"
+	InputTag sourceTag = EcalRawToRecHitFacility
 
 	VPSet CandJobPSet ={
 		{InputTag Source = l1extraParticles
@@ -9,7 +9,7 @@ module ecalRegionalCandFEDs = EcalListOfFEDSProducer {
 		double regionEtaMargin = 1
 		double regionPhiMargin = 1
 		double epsilon =0.01
-		double bePrecise = false
+		bool bePrecise = false
 		string propagatorNameToBePrecise = ""
 		},
 		{ InputTag Source = l1extraParticles:Central
@@ -18,7 +18,7 @@ module ecalRegionalCandFEDs = EcalListOfFEDSProducer {
 		double regionEtaMargin = 1
 		double regionPhiMargin = 1
 		double epsilon =0.01
-		double bePrecise = false
+		bool bePrecise = false
 		string propagatorNameToBePrecise = ""
 		}, 
 		{ InputTag Source = l1extraParticles:Tau
@@ -27,7 +27,7 @@ module ecalRegionalCandFEDs = EcalListOfFEDSProducer {
 		double regionEtaMargin = 1
 		double regionPhiMargin = 1
 		double epsilon =0.01
-		double bePrecise = false
+		bool bePrecise = false
 		string propagatorNameToBePrecise = ""
 		}, 
 		{InputTag Source = hltL2MuonCandidates
@@ -36,7 +36,7 @@ module ecalRegionalCandFEDs = EcalListOfFEDSProducer {
 		double regionEtaMargin = 0.5
 		double regionPhiMargin = 0.5
 		double epsilon =0.01
-		double bePrecise = false
+		bool bePrecise = false
 		string propagatorNameToBePrecise = ""
 		},
 		{InputTag Source = hltL3MuonCandidates
@@ -45,7 +45,7 @@ module ecalRegionalCandFEDs = EcalListOfFEDSProducer {
 		double regionEtaMargin = 0.5
 		double regionPhiMargin = 0.5
 		double epsilon =0.01
-		double bePrecise = false
+		bool bePrecise = false
 		string propagatorNameToBePrecise = ""
 		}
 	}

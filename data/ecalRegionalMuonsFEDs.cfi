@@ -1,6 +1,6 @@
 module ecalRegionalMuonsFEDs = EcalRawToRecHitRoI {
 	string type = "muon"
-	InputTag sourceTag = "EcalRawToRecHitFacility"
+	InputTag sourceTag = EcalRawToRecHitFacility
 
 	PSet MuJobPSet ={
 		InputTag Source = l1extraParticles
