@@ -1,7 +1,5 @@
-es_source dummy = EmptyESSource {
-	string recordName = "EcalRegionCablingRecord"
-	 vuint32 firstValid = { 1 }
-	bool iovIsRunNotTime = true
-}
+#dependency record.
+include "Geometry/EcalMapping/data/EcalMappingRecord.cfi"
+include "Geometry/EcalMapping/data/EcalMapping.cfi"
 
 include "EventFilter/EcalRawToDigi/data/EcalRegionCablingESProducer.cfi"
