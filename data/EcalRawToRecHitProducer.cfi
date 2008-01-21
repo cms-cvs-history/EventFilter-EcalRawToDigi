@@ -1,4 +1,5 @@
 module EcalRawToRecHitProducer = EcalRawToRecHitProducer {
+	InputTag lazyGetterTag = EcalRawToRecHitFacility
 	InputTag sourceTag = EcalRawToRecHitRoI
 	bool splitOutput=true
 	string EBrechitCollection = "EcalRecHitsEB"
