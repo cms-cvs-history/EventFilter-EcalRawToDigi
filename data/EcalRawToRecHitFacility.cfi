@@ -1,5 +1,4 @@
 module EcalRawToRecHitFacility = EcalRawToRecHitFacility {
 	InputTag sourceTag = rawDataCollector
 	string workerName = ""
-	bool global = false
 }
