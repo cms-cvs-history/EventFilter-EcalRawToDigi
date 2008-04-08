@@ -16,10 +16,11 @@ es_module EcalUnpackerWorkerESProducer = EcalUnpackerWorkerESProducer {
 
 		string DCCMapFile = "EventFilter/EcalRawToDigiDev/data/DCCMap.txt"
 		bool headerUnpacking = false
-		bool srpUnpacking = false
-		bool tccUnpacking = true
-		bool feUnpacking = true
-		bool memUnpacking = false
-		bool syncCheck = false
+		bool srpUnpacking    = false
+		bool tccUnpacking    = true
+		bool feUnpacking     = true
+		bool memUnpacking    = false
+                bool feIdCheck       = true
+		bool syncCheck       = false
 	}
 }
