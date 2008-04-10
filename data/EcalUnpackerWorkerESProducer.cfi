@@ -23,4 +23,7 @@ es_module EcalUnpackerWorkerESProducer = EcalUnpackerWorkerESProducer {
                 bool feIdCheck       = true
 		bool syncCheck       = false
 	}
+
+	# channel flags to be exluded from reconstruction, e.g { 1, 2 }
+	vint32 ChannelStatusToBeExcluded = { }
 }
