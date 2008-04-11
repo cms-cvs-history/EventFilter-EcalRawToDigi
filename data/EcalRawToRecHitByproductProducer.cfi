@@ -1,0 +1,3 @@
+module hltEcalRawToRecHitByproductProducer = EcalRawToRecHitByproductProducer {
+	string workerName = ""
+}
