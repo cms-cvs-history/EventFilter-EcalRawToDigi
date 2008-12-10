@@ -1,8 +1,0 @@
-module EcalRawToRecHitRoI = EcalRawToRecHitRoI {
-	string type = "muon egamma jet candidate all"
-	InputTag sourceTag = "EcalRawToRecHitFacility"
-	VPSet JetJobPSet ={}
-	VPSet EmJobPSet = {}
-	PSet MuonJobPSet ={}
-	VPSet CandJobPSet ={}
-}

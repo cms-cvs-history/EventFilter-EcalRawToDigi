@@ -1,5 +1,0 @@
-#dependency record.
-include "Geometry/EcalMapping/data/EcalMappingRecord.cfi"
-include "Geometry/EcalMapping/data/EcalMapping.cfi"
-
-include "EventFilter/EcalRawToDigi/data/EcalRegionCablingESProducer.cfi"
