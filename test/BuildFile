@@ -1,0 +1,10 @@
+<use name=FWCore/Framework>
+<library file=stubs/EcalMatacqHist2.cc name=EcalMatacqHist2>
+   <flags EDM_PLUGIN=1> 
+   <use name=DataFormats/EcalDigi>
+   <use name=root>
+</library> 
+
+#<bin file=testMajority.cc name=testMajority>
+#  <use name=EventFilter/EcalDigi>
+#</bin>
