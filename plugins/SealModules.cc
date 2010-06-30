@@ -25,3 +25,7 @@ DEFINE_FWK_MODULE(EcalRawToDigi);
 
 #include "EventFilter/EcalRawToDigi/interface/MatacqProducer.h"
 DEFINE_FWK_MODULE(MatacqProducer);
+
+#include "EventFilter/EcalRawToDigi/interface/EcalDumpRaw.h"
+DEFINE_FWK_MODULE(EcalDumpRaw);
+
