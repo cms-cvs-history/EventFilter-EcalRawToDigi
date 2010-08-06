@@ -505,7 +505,7 @@ void EcalElectronicsMapper::fillMaps(){
                (MIN_CCUID_JUMP <= feChannel && feChannel <=MAX_CCUID_JUMP )
                ) continue;
             
-	    vector<EcalScDetId> scDetIds = mappingBuilder_->getEcalScDetId(smId,feChannel);
+	    std::vector<EcalScDetId> scDetIds = mappingBuilder_->getEcalScDetId(smId,feChannel);
 	    // scDetIds_[smId-1][feChannel-1] = new EcalScDetId(scDetId.rawId());
 	    scEleIds_[smId-1][feChannel-1] = new EcalElectronicsId(smId,feChannel,1,1);
 
