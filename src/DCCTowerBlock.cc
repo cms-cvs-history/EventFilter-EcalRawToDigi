@@ -181,7 +181,7 @@ int DCCTowerBlock::unpackXtalData(uint expStripID, uint expXtalID){
     }
     
     // check whether gain==0 and adc() stays constant for (at least) 5 consecutive samples
-    uint plateauEnd = min(nTSamples_,(uint)(firstGainZeroSampID+5));
+    uint plateauEnd = std::min(nTSamples_,(uint)(firstGainZeroSampID+5));
     for (uint s=firstGainZeroSampID; s<plateauEnd; s++) 
       {
 	if( df.sample(s).gainId()==0 && df.sample(s).adc()==firstGainZeroSampADC ) {;}
