@@ -10,8 +10,8 @@
  *
  * \file DCCEventBlock.h
  *
- * $Date: 2009/07/27 20:32:22 $
- * $Revision: 1.3 $
+ * $Date: 2010/09/24 16:03:23 $
+ * $Revision: 1.5 $
  *
  * \author N. Almeida
  * \author G. Franzoni
@@ -121,5 +121,18 @@ class DCCEventBlock {
 	 
 
 };
+
+
+// this code intended for sync checking in files:
+//   DCC(FE|Mem|TCC|SRP)Block.cc
+
+enum BlockType {FE_MEM = 1, TCC_SRP = 2};
+
+bool isSynced(const unsigned int dccBx,
+              const unsigned int bx,
+              const unsigned int dccL1,
+              const unsigned int l1,
+              const BlockType type,
+              const unsigned int fov);
 
 #endif
