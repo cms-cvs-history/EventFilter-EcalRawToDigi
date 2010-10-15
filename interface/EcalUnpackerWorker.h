@@ -44,7 +44,7 @@ class EcalUnpackerWorker : public EcalUnpackerWorkerBase {
   void setHandles(const EcalUnpackerWorkerRecord & iRecord);
   void set(const edm::EventSetup & es) const;
 
-  uint maxElementIndex() const { return EcalRegionCabling::maxElementIndex();}
+  unsigned int maxElementIndex() const { return EcalRegionCabling::maxElementIndex();}
   
  private:
 
@@ -67,6 +67,7 @@ class EcalUnpackerWorker : public EcalUnpackerWorkerBase {
   mutable std::auto_ptr<EBSrFlagCollection> productEBSrFlags;
   mutable std::auto_ptr<EESrFlagCollection> productEESrFlags;
   mutable std::auto_ptr<EcalTrigPrimDigiCollection> productTps;
+  mutable std::auto_ptr<EcalPSInputDigiCollection> productPSs;
   mutable std::auto_ptr<EcalElectronicsIdCollection> productInvalidTTIds;
   mutable std::auto_ptr<EcalElectronicsIdCollection> productInvalidZSXtalIds;
   mutable std::auto_ptr<EcalElectronicsIdCollection> productInvalidBlockLengths;

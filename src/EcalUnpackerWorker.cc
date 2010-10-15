@@ -20,8 +20,8 @@ EcalUnpackerWorker::EcalUnpackerWorker(const edm::ParameterSet & conf){
   edm::ParameterSet DCCpset = conf.getParameter<edm::ParameterSet>("DCCDataUnpacker");
   edm::ParameterSet EEMpset = conf.getParameter<edm::ParameterSet>("ElectronicsMapper");
 
-  uint numbXtalTSamples_ = EEMpset.getParameter<uint>("numbXtalTSamples");
-  uint numbTriggerTSamples_ = EEMpset.getParameter<uint>("numbTriggerTSamples");
+  unsigned int numbXtalTSamples_ = EEMpset.getParameter<unsigned int>("numbXtalTSamples");
+  unsigned int numbTriggerTSamples_ = EEMpset.getParameter<unsigned int>("numbTriggerTSamples");
   
   if( numbXtalTSamples_ <6 || numbXtalTSamples_>64 || (numbXtalTSamples_-2)%4 ){
     edm::LogError("IncorrectConfiguration")<<"Unsuported number of xtal time samples : "<<numbXtalTSamples_
@@ -65,6 +65,7 @@ EcalUnpackerWorker::EcalUnpackerWorker(const edm::ParameterSet & conf){
   unpacker_->setEBSrFlagsCollection(&productEBSrFlags);
   unpacker_->setEESrFlagsCollection(&productEESrFlags);
   unpacker_->setEcalTpsCollection(&productTps);
+  unpacker_->setEcalPSsCollection(&productPSs);
   unpacker_->setInvalidTTIdsCollection(&productInvalidTTIds);  
   unpacker_->setInvalidZSXtalIdsCollection(&productInvalidZSXtalIds);
   unpacker_->setInvalidBlockLengthsCollection(&productInvalidBlockLengths);
@@ -129,6 +130,7 @@ void EcalUnpackerWorker::update(const edm::Event & e)const{
   productEBSrFlags.reset(new EBSrFlagCollection);
   productEESrFlags.reset(new EESrFlagCollection);
   productTps.reset(new EcalTrigPrimDigiCollection);
+  productPSs.reset(new EcalPSInputDigiCollection);
   productInvalidTTIds.reset(new EcalElectronicsIdCollection);
   productInvalidZSXtalIds.reset(new EcalElectronicsIdCollection);
   productInvalidBlockLengths.reset(new EcalElectronicsIdCollection);
@@ -175,7 +177,7 @@ std::auto_ptr< EcalRecHitCollection > EcalUnpackerWorker::work(const uint32_t & 
       uint64_t * pData = (uint64_t *)(fedData.data());
       /*R*/ LogDebug("EcalRawToRecHit|Worker")<<"calling the unpacker: "<<length<<" "<<smId<<" "<<fedIndex
 					      <<watcher.lap();
-      unpacker_->unpack( pData, static_cast<uint>(length),smId,fedIndex);
+      unpacker_->unpack( pData, static_cast<unsigned int>(length),smId,fedIndex);
       /*R*/ LogDebug("EcalRawToRecHit|Worker")<<"unpacking done."
 					      <<watcher.lap();
     }
