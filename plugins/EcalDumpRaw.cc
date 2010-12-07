@@ -1,6 +1,6 @@
 //emacs settings:-*- mode: c++; c-basic-offset: 2; indent-tabs-mode: nil -*-
 /*
- * $Id: EcalDumpRaw.cc,v 1.2 2010/09/28 17:47:13 pgras Exp $
+ * $Id: EcalDumpRaw.cc,v 1.4 2010/12/06 20:35:02 wmtan Exp $
  *
  * Author: Ph Gras. CEA/IRFU - Saclay
  *
@@ -543,7 +543,7 @@ bool EcalDumpRaw::decode(const uint32_t* data, int iWord64, ostream& out){
                 << " (" << colorNames[(data[1]>>6)&0x3] << ")"
                 << " DCC ID: " << dccId_;
       int l;
-      if(dccId_>=10 && dccId_<=46 && side_ >=0 && side_ <= 1){
+      if(dccId_>=10 && dccId_<=46 && side_ <= 1){ // side_ >=0, since side is unsigned
         l = lme(dccId_, side_);
       } else{
         l = -1;//indicates error
